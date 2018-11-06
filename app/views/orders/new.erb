@@ -1,0 +1,15 @@
+
+<h1><%=@title %></h1>
+<form action="/orders" method="post" enctype="multipart/form-data">
+  <label for="claim_num">Claim Number:</label>
+  <br />
+  <input id="claim_num" name="order[claim_num]" type="text" value="<%= @order.claim_num %>" />
+  <br />
+
+  <label for="contact_name">Contact Name:</label>
+  <br />
+  <textarea id="contact_name" name="order[contact_name]" rows="5"><%= @order.contact_name %></textarea>
+  <br />
+
+  <input type="submit" value="Create Order" />
+</form>

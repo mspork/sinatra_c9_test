@@ -1,0 +1,17 @@
+<h1>Edit Order</h1>
+<form action="/orders/<%= @order.id %>" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put" />
+
+  <label for="claim_num">Claim Number:</label>
+  <br />
+  <input id="claim_num" name="order[claim_num]" type="text" value="<%= @order.claim_num %>" />
+  <br />
+
+  <label for="contact_name">Contact Name:</label>
+  <br />
+  <input id="contact_name" name="order[contact_name]" type="text" value="<%= @order.contact_name %>" />
+  <br />
+
+
+  <input type="submit" value="Update Order" />
+</form>
